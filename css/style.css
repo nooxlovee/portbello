@@ -1,0 +1,1671 @@
+@font-face {
+    font-family: 'montesratsemi';
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'forum';
+    src: url(../fonts/Forum-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'montesrat';
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'montbold';
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'montesratmed';
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'play';
+    src: url(../fonts/ofont.ru_Playfair\ Display.ttf);
+}
+
+@font-face {
+    font-family: 'playsc';
+    src: url(../fonts/ofont.ru_Playfair\ Display\ SC.ttf);
+}
+
+@font-face {
+    font-family: 'playscbold';
+    src: url(../fonts/ofont.ru_Playfair\ Display\ SC\ \(1\).ttf);
+}
+
+@keyframes rotateWatch {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-90deg);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+html {
+    overflow-x: clip;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@keyframes changeNav {
+    from {
+        background-color: rgba(13, 36, 46, 0.2);
+        box-shadow: 0 8px 24px transparent;
+    }
+
+    to {
+        background-color: rgba(13, 36, 46, 0.815);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+}
+
+/* шапка */
+
+.header-block nav {
+    /* Заменяем прежний градиент, чтобы фон плавно менялся */
+    background-image: none;
+    opacity: 1;
+
+    animation: changeNav linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0px 100px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+}
+
+.header-block a {
+    font-family: 'forum';
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #F7E6C8;
+    letter-spacing: 1.92px;
+}
+
+nav {
+    width: 72%;
+    background: linear-gradient(90deg, rgba(182, 207, 228, 0.2) 29.81%, rgba(13, 36, 46, 0.87) 80.29%);
+    opacity: 0.8;
+    backdrop-filter: blur(45px);
+    border-radius: 24.5px;
+    padding: 12px 0;
+    padding-left: 63px;
+    display: flex;
+    justify-content: start;
+    gap: 66px;
+}
+
+.header-block nav a:hover{
+    transform: scale(110%);
+}
+
+.header-block img {
+    width: 137px;
+    padding-left: 46px;
+}
+
+.header-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 135px;
+    /* padding-left: 46px; */
+    padding-top: 24px;
+}
+
+/* баннер */
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 1400px;
+    overflow: hidden;
+}
+
+.banner video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+
+.banner-img {
+    display: flex;
+    height: 1204px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.flag-banner p {
+    font-family: 'forum';
+    font-size: 32px;
+    color: #FBF2C7;
+    letter-spacing: 3.2px;
+    position: relative;
+    z-index: 2;
+}
+
+.flag-banner {
+    position: absolute;
+    bottom: 50px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.flag-banner p {
+    color: #FBF2C7;
+    font-size: 32px;
+    letter-spacing: 3.2px;
+    font-family: 'forum';
+    position: relative;
+    z-index: 2;
+}
+
+.flag-banner img {
+    width: 111px;
+    position: relative;
+    z-index: 2;
+}
+
+/* блок с яхтами😎 */
+
+main {
+    background-color: #DBD7CC;
+    height: 925px;
+}
+
+#star {
+    position: absolute;
+    opacity: 50%;
+    top: 84px;
+    right: -260px;
+    animation: rotateWatch linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+
+#polosa {
+    width: 600px;
+    position: absolute;
+    opacity: 50%;
+    top: 334px;
+    left: -400px;
+    animation: rotate linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+
+
+.yach h2 {
+    font-size: 210px;
+    text-transform: uppercase;
+    transform: scaleY(2);
+    letter-spacing: 27px;
+    color: #ECEBE7;
+    position: absolute;
+    z-index: 3;
+    top: 182px;
+}
+
+.main-block {
+    position: relative;
+}
+
+
+/* Скрываем переключатели */
+
+#yacht1,
+#yacht2,
+#yacht3 {
+    display: none;
+}
+
+/* Названия яхт */
+
+.yach h2 {
+    font-size: 210px;
+    text-transform: uppercase;
+    letter-spacing: 27px;
+    color: #ECEBE7;
+    position: absolute;
+    z-index: 3;
+    top: 182px;
+    left: 50%;
+    transform: translateX(-50%) scaleY(2);
+    opacity: 0;
+    transition: 0.7s;
+}
+
+/* Показываем нужное название */
+
+#yacht1:checked~.yach .title1 {
+    opacity: 1;
+}
+
+#yacht2:checked~.yach .title2 {
+    opacity: 1;
+}
+
+#yacht3:checked~.yach .title3 {
+    opacity: 1;
+}
+
+/* Фотографии яхт */
+
+.yacht-photo {
+    position: absolute;
+    top: 268px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 993px;
+    display: block;
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.7s;
+}
+
+.yacht-photo img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+/* Показываем нужную яхту */
+
+#yacht1:checked~.yach .photo1 {
+    opacity: 1;
+    z-index: 4;
+    pointer-events: auto;
+}
+
+#yacht2:checked~.yach .photo2 {
+    opacity: 1;
+    z-index: 4;
+    pointer-events: auto;
+}
+
+#yacht3:checked~.yach .photo3 {
+    opacity: 1;
+    z-index: 4;
+    pointer-events: auto;
+}
+
+/* Информация о яхтах */
+
+.infa-main {
+    width: 1300px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 768px;
+    padding-left: 94px;
+    gap: 62px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s;
+}
+
+/* характеристики */
+
+#yacht1:checked~.info1 {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+#yacht2:checked~.info2 {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+#yacht3:checked~.info3 {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+
+.speed h3 {
+    font-family: 'montbold';
+    text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 0.52px;
+}
+
+.speed p {
+    font-family: 'montesrat';
+    font-size: 23px;
+}
+
+.speed {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    gap: 9px;
+    /* width: 156px; */
+    padding-right: 62px;
+    border-right: 2px solid #B9A084;
+
+}
+
+#speedlast {
+    border: none;
+}
+
+#speedlast2 {
+    border: none;
+}
+
+#speedlast3 {
+    border: none;
+}
+
+
+.infa-main a {
+    padding: 32px 45px;
+    text-transform: uppercase;
+    font-family: 'montesratmed';
+    font-size: 20px;
+    /* line-height: 24px; */
+    letter-spacing: 0.4px;
+    color: #CDB296;
+    background-color: black;
+    outline: 1px solid #c9aa87;
+    outline-offset: -10px;
+}
+
+.infa-main a:hover{
+    transform: scale(110%);
+}
+
+.infa-main {
+    width: 1300px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: absolute;
+    /* left: 59px; */
+    top: 768px;
+    padding-left: 94px;
+    gap: 62px;
+    /* padding-top: 138px; */
+}
+
+/* блок с видео 🤩 */
+
+.main-video {
+    background-color: #DBD7CC;
+    /* width: 100%; */
+    padding: 150px 0 170px;
+    overflow: hidden;
+}
+
+.video-block {
+    position: relative;
+}
+
+.videos {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.video {
+    /* width: 400px; */
+    position: relative;
+}
+
+.video video {
+    width: 400px;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 28px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+#zag {
+    /* position: relative; */
+    left: -25px;
+}
+
+.video h2 {
+    font-family: 'playscbold';
+    font-size: 150px;
+    color: #B9A084;
+    opacity: 60%;
+    transform: scaleY(2);
+    position: absolute;
+    top: -155px;
+    /* left: -25px; */
+    z-index: 1;
+}
+
+.video-line {
+    width: 180px;
+    height: 1px;
+    background-color: #B9A084;
+    opacity: 60%;
+    position: absolute;
+    bottom: -35px;
+    left: 30px;
+}
+
+#duga {
+    position: absolute;
+    left: -340px;
+}
+
+#duga2 {
+    position: absolute;
+    right: -300px;
+    opacity: 60%;
+}
+
+#duga3 {
+    position: absolute;
+    left: 426px;
+}
+
+#duga4 {
+    position: absolute;
+    left: 850px;
+    top: 155px;
+}
+
+#duga5 {
+    position: absolute;
+    left: 0;
+    top: -100px;
+}
+
+#duga6 {
+    position: absolute;
+    right: -120px;
+    opacity: 80%;
+}
+
+#duga7 {
+    position: absolute;
+    bottom: -250px;
+    left: -200px;
+    opacity: 60%;
+}
+
+.video2 {
+    margin-top: 155px;
+}
+
+.video3 {
+    margin-top: 310px;
+}
+
+.video-line {
+    width: 180px;
+    height: 1px;
+    background-color: #B9A084;
+    opacity: 0.6;
+    position: absolute;
+    bottom: -35px;
+    left: 30px;
+}
+
+/* наша философия🤔 */
+
+.filosofy {
+    height: 1330px;
+    background: url(../image/fonfil.png) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
+.filosofy .container {
+    position: relative;
+    height: 100%;
+}
+
+.fil-text {
+    width: 467px;
+    position: absolute;
+    top: 160px;
+}
+
+.fil-text h2 {
+    font-family: 'playscbold';
+    font-size: 63px;
+    color: #FBF2C7;
+    line-height: 60px;
+    letter-spacing: 1.89px;
+    transform: scaleY(1.5);
+}
+
+span {
+    font-size: 74px;
+}
+
+.fil-text span {
+    color: white;
+}
+
+.fill-line {
+    width: 180px;
+    height: 3px;
+    background-color: #FBF2C7;
+    margin-top: 44px;
+}
+
+#yahta {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#linia1 {
+    position: absolute;
+    top: 570px;
+    left: 400px;
+}
+
+#linia2 {
+    position: absolute;
+    left: 440px;
+    bottom: 439px;
+}
+
+#linia3 {
+    position: absolute;
+    right: 440px;
+    bottom: 439px;
+}
+
+#linia4 {
+    position: absolute;
+    right: 400px;
+    top: 570px;
+}
+
+#kryg1 {
+    position: absolute;
+    top: 520px;
+    left: 130px;
+    z-index: 0;
+}
+
+#kryg2 {
+    position: absolute;
+    right: 145px;
+    bottom: 239px;
+    z-index: 0;
+}
+
+#kryg3 {
+    position: absolute;
+    right: 145px;
+    bottom: 539px;
+    z-index: 0;
+}
+
+#kryg4 {
+    position: absolute;
+    left: 130px;
+    top: 770px;
+    z-index: 0;
+}
+
+
+
+.fil-img img {
+    width: 70px;
+    height: 70px;
+}
+
+.fil-img h3 {
+    width: 280px;
+    font-family: 'montesratsemi';
+    font-size: 32px;
+    letter-spacing: -0.64px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.line-img {
+    width: 270px;
+    height: 1px;
+    background-color: #FBF2C7;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.fil-img p {
+    font-family: 'montesratmed';
+    font-size: 20px;
+    color: white;
+    width: 280px;
+    letter-spacing: -0.4px;
+}
+
+.fil-img {
+    display: flex;
+    gap: 25px;
+    align-items: start;
+
+}
+
+#fil1 {
+    position: absolute;
+    top: 520px;
+    left: 15px;
+}
+
+#fil2 {
+    position: absolute;
+    left: 50px;
+    bottom: 345px;
+}
+
+#fil3 {
+    position: absolute;
+    top: 520px;
+    right: 15px;
+}
+
+#fil4 {
+    position: absolute;
+    bottom: 345px;
+    right: 50px;
+}
+
+#pb {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#krugi {
+    position: absolute;
+    left: 49%;
+    transform: translateX(-50%);
+    bottom: 10%;
+
+}
+
+/* баннер для блока с маршрутом😲 */
+
+.article1 {
+    height: 1081px;
+    background: url(../image/italy.png) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative
+}
+
+.article-block.container {
+    position: relative;
+}
+
+#italy {
+    position: absolute;
+    top: 130px;
+    left: 196px;
+}
+
+#pb1 {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* сам маршрут😏 */
+
+.article2 {
+    background-color: #E9DDC8;
+    background-image: url(../image/karta_clean.webp);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 1385px 800px;
+    height: 800px;
+    width: 100%;
+    position: relative;
+}
+
+.article2-block {
+    position: relative;
+    height: 100%;
+}
+
+#karta {
+    display: none;
+}
+
+#list {
+    position: absolute;
+    left: -120px;
+    top: 10px;
+    width: 500px;
+    filter: blur(2px);
+}
+
+.route-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.route-line {
+    position: absolute;
+    top: 80px;
+    bottom: 80px;
+    left: 132px;
+    width: 2px;
+    background-color: #9D815C;
+}
+
+.route-stop {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.route-stop h2 {
+    width: 125px;
+    font-family: 'play';
+    transform: scaleY(1.2);
+    font-size: 74px;
+    color: #BFA98F;
+}
+
+.route-stop span {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #987A53;
+    z-index: 1;
+}
+
+.route-stop p {
+    margin-left: 25px;
+    font-family: 'montesratsemi';
+    font-size: 17px;
+    color: #765F43;
+    /* white-space: nowrap; */
+}
+
+#port {
+    position: absolute;
+    width: 200px;
+    top: -90px;
+    left: 365px;
+    z-index: 3;
+}
+
+#port:hover{
+    transform: scale(105%);
+}
+
+#gen {
+    position: absolute;
+    width: 260px;
+    top: 80px;
+    left: 400px;
+    z-index: 3;
+}
+
+#gen:hover{
+    transform: scale(105%);
+}
+
+#chin {
+    position: absolute;
+    width: 170px;
+    top: 310px;
+    left: 370px;
+    z-index: 3;
+}
+
+#chin:hover{
+    transform: scale(105%);
+}
+
+#kapr {
+    position: absolute;
+    width: 190px;
+    top: 400px;
+    left: 660px;
+    z-index: 3;
+}
+
+#kapr:hover{
+    transform: scale(105%);
+}
+
+#am {
+    position: absolute;
+    width: 260px;
+    top: 500px;
+    left: 340px;
+    z-index: 3;
+}
+
+#am:hover{
+    transform: scale(105%);
+}
+
+#poz {
+    position: absolute;
+    width: 250px;
+    top: 540px;
+    left: 840px;
+    z-index: 3;
+}
+
+#poz:hover{
+    transform: scale(105%);
+}
+
+#doroga {
+    position: absolute;
+    width: 550px;
+    /* top: 35px; */
+    left: 250px;
+    z-index: 0;
+}
+
+/* галэрэя🤗 */
+
+.summer-gallery {
+    width: 100%;
+    height: 750px;
+    background: url(../image/fongallery.png) center no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.summer-gallery video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.6);
+}
+
+.summer-gallery .summer-block {
+    width: 1200px;
+    height: 750px;
+    position: relative;
+}
+
+.summer-gallery .summer-title {
+    position: absolute;
+    top: 55px;
+    left: 500px;
+    width: 200px;
+    text-align: center;
+    z-index: 10;
+}
+
+.summer-gallery .summer-title h2 {
+    font-family: 'play';
+    font-size: 48px;
+    color: #FBF2C7;
+    letter-spacing: 5px;
+}
+
+.summer-gallery .summer-title p {
+    font-family: 'montesrat';
+    font-size: 17px;
+    color: #FBF2C7;
+}
+
+/* Карточки */
+
+.summer-gallery .summer-cards {
+    width: 1200px;
+    height: 750px;
+    position: relative;
+}
+
+.summer-gallery .summer-card {
+    position: absolute;
+    transition: 0.5s;
+}
+
+.summer-gallery .summer-card img {
+    display: block;
+    object-fit: contain;
+    border-radius: 18px;
+}
+
+
+.summer-gallery .card1,
+.summer-gallery .card1 img,
+.summer-gallery .card5,
+.summer-gallery .card5 img {
+    width: 130px;
+    height: 234px;
+}
+
+.summer-gallery .card2,
+.summer-gallery .card2 img,
+.summer-gallery .card4,
+.summer-gallery .card4 img {
+    width: 210px;
+    height: 354px;
+}
+
+.summer-gallery .card3,
+.summer-gallery .card3 img {
+    width: 360px;
+    height: 556px;
+}
+
+.summer-gallery .card1 {
+    top: 301px;
+    left: 185px;
+    z-index: 1;
+}
+
+.summer-gallery .card2 {
+    top: 241px;
+    left: 265px;
+    z-index: 2;
+}
+
+.summer-gallery .card3 {
+    top: 140px;
+    left: 420px;
+    z-index: 4;
+}
+
+.summer-gallery .card4 {
+    top: 241px;
+    left: 720px;
+    z-index: 2;
+}
+
+.summer-gallery .card5 {
+    top: 301px;
+    left: 870px;
+    z-index: 1;
+}
+
+/* Номера */
+.summer-gallery .summer-card span {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    font-family: 'montesrat';
+    font-size: 10px;
+    color: #E5E1D8;
+    z-index: 5;
+    opacity: 60%;
+}
+
+#cardr{
+    top: 35px;
+    right: 35px;
+    font-size: 7px;
+}
+
+#cardr2{
+    position: absolute;
+    top: 43px;
+    right: 43px;
+    font-family: 'montesrat';
+    font-size: 10px;
+    color: #E5E1D8;
+    z-index: 5;
+    opacity: 60%;
+}
+
+.summer-gallery .card1 span,
+.summer-gallery .card5 span {
+    top: 40px;
+    right: 35px;
+    font-size: 7px;
+    opacity: 60%;
+}
+
+.summer-gallery .card3 span {
+    top: 40px;
+    right: 55px;
+    font-size: 16px;
+    opacity: 1;
+}
+
+/* Наведение */
+
+.summer-gallery .card1:hover,
+.summer-gallery .card2:hover,
+.summer-gallery .card4:hover,
+.summer-gallery .card5:hover {
+    transform: scale(1.05);
+}
+
+.summer-gallery .card3:hover {
+    transform: scale(1.03);
+}
+
+/* Стрелки */
+
+.summer-gallery .summer-arrows {
+    position: absolute;
+    top: 95px;
+    left: 220px;
+    width: 760px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.summer-gallery .summer-arrow {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FBF2C7;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.summer-gallery .summer-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.shturval {
+    background-color: #EADECA;
+    overflow: hidden;
+}
+
+.shturval-block {
+    position: relative;
+    height: 1000px;
+    width: 1300px;
+    margin: 0 auto;
+}
+
+#slide1,
+#slide2,
+#slide3 {
+    display: none;
+}
+
+#krug-sht {
+    height: 1000px;
+    position: absolute;
+    right: -500px;
+    top: 0;
+}
+
+/* самый апупительный блок с историей😍 */
+
+#shturval {
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    right: -500px;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 1s ease;
+    z-index: 3;
+}
+
+.photos {
+    width: 850px;
+    height: 850px;
+    position: absolute;
+    top: 50%;
+    right: -500px;
+    transform: translateY(-50%) rotate(0deg);
+    transform-origin: center center;
+    transition: transform 1s ease;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.photos img {
+    border: 15px solid #E2C5A3;
+    border-radius: 20px;
+    position: absolute;
+    width: 500px;
+    height: 360px;
+    object-fit: cover;
+    transform: rotate(0deg);
+    transform-origin: center center;
+    transition: 1s;
+    box-shadow: 0 25px 50px rgba(34, 24, 12, 0.3),
+        0 10px 20px rgba(34, 24, 12, 0.18);
+}
+
+/* Первая фотография — слева */
+
+#para {
+    left: -185px;
+    top: 245px;
+}
+
+/* Вторая фотография — справа снизу */
+
+#para2 {
+    left: 342px;
+    top: 520px;
+}
+
+/* Третья фотография — справа сверху */
+
+#para3 {
+    left: 322px;
+    top: -75px;
+}
+
+/* Второе положение */
+
+#slide2:checked~#shturval {
+    transform: translateY(-50%) rotate(120deg);
+}
+
+#slide2:checked~.photos {
+    transform: translateY(-50%) rotate(120deg);
+}
+
+#slide2:checked~.photos img {
+    transform: rotate(-120deg);
+}
+
+/* Третье положение */
+
+#slide3:checked~#shturval {
+    transform: translateY(-50%) rotate(240deg);
+}
+
+#slide3:checked~.photos {
+    transform: translateY(-50%) rotate(240deg);
+}
+
+#slide3:checked~.photos img {
+    transform: rotate(-240deg);
+}
+
+
+/* Переключение */
+
+.next {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    top: 50%;
+    right: 185px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+    display: none;
+}
+
+#slide1:checked~.next1 {
+    display: block;
+}
+
+#slide2:checked~.next2 {
+    display: block;
+}
+
+#slide3:checked~.next3 {
+    display: block;
+}
+
+#mysh {
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 965px;
+    z-index: 4;
+    opacity: 80%;
+}
+
+#slide1:checked~.photos #para {
+    transform: translateX(-370px);
+}
+
+#slide2:checked~.photos #para2 {
+    transform: rotate(-120deg) translateX(-370px);
+}
+
+#slide3:checked~.photos #para3 {
+    transform: rotate(-240deg) translateX(-370px);
+}
+
+.shturval-text {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 390px;
+    height: 700px;
+    z-index: 2;
+}
+
+.shturval-text img {
+    width: 300px;
+}
+
+.shturval-text h2 {
+    position: absolute;
+    top: 340px;
+    left: 0;
+    font-family: 'play';
+    font-size: 56px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #564126;
+}
+
+
+.vne {
+    font-style: italic;
+    font-size: 56px;
+}
+
+.shturval-line {
+    position: absolute;
+    top: 510px;
+    left: 0;
+    width: 350px;
+    border-top: 1px solid #B3955C;
+    text-align: center;
+    line-height: 0;
+}
+
+.shturval-line span {
+    background-color: #EADECA;
+    padding: 0 12px;
+    font-size: 25px;
+    color: #B3955C;
+}
+
+.shturval-text p {
+    position: absolute;
+    top: 575px;
+    left: 0;
+    font-family: 'montesrat';
+    font-size: 21px;
+    line-height: 1.6;
+    color: #6B5539;
+}
+
+/* Номер текущей фотографии */
+
+.shturval-pages {
+    position: absolute;
+    bottom: 75px;
+    left: 40px;
+    width: 350px;
+    z-index: 4;
+}
+
+.shturval-pages span {
+    font-family: 'play';
+    color: #B3955C;
+}
+
+.shturval-pages .num {
+    display: none;
+    font-size: 58px;
+    font-style: italic;
+}
+
+.shturval-pages .total {
+    font-size: 25px;
+    color: #6B5539;
+    margin-left: 15px;
+}
+
+/* Линия переключения */
+
+.shturval-progress {
+    width: 350px;
+    height: 2px;
+    background-color: #C5B18E;
+    margin-top: 20px;
+}
+
+.shturval-progress-line {
+    width: 33.33%;
+    height: 4px;
+    background-color: #B3955C;
+    transition: 1s;
+}
+
+/* Первая фотография */
+
+#slide1:checked~.shturval-pages .page1 {
+    display: inline;
+}
+
+/* Вторая фотография */
+
+#slide2:checked~.shturval-pages .page2 {
+    display: inline;
+}
+
+#slide2:checked~.shturval-pages .shturval-progress-line {
+    width: 66.66%;
+}
+
+/* Третья фотография */
+
+#slide3:checked~.shturval-pages .page3 {
+    display: inline;
+}
+
+#slide3:checked~.shturval-pages .shturval-progress-line {
+    width: 100%;
+}
+
+/* скучный блок с заявками😶 */
+
+.contacts {
+    width: 100%;
+    height: 550px;
+    background: url(../image/fonobrat\(1\).png) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.contacts-block {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contacts-text {
+    width: 450px;
+}
+
+.contacts-text h2 {
+    font-family: 'play';
+    font-size: 62px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #04122D;
+}
+
+.contacts-text p {
+    width: 350px;
+    margin-top: 25px;
+    font-family: 'montesrat';
+    font-size: 17px;
+    line-height: 1.5;
+    color: #04122D;
+}
+
+.contacts-form {
+    width: 400px;
+    padding: 35px;
+    background-color: #04122D;
+    border-radius: 12px;
+}
+
+.contacts-form h3 {
+    font-family: 'play';
+    font-size: 27px;
+    font-weight: 400;
+    color: #FBF2C7;
+    margin-bottom: 25px;
+}
+
+.contacts-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contacts-form input[type="text"],
+.contacts-form input[type="tel"],
+.contacts-form textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: none;
+    border: 1px solid #716F65;
+    color: #FBF2C7;
+    font-family: 'montesrat';
+    font-size: 14px;
+    outline: none;
+}
+
+.contacts-form textarea {
+    height: 85px;
+    resize: none;
+}
+
+.contacts-form input::placeholder,
+.contacts-form textarea::placeholder {
+    color: #B9A084;
+}
+
+.contacts-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.contacts-check input {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    accent-color: #FBF2C7;
+}
+
+.contacts-check label {
+    font-family: 'montesrat';
+    font-size: 11px;
+    line-height: 1.5;
+    color: #CDB296;
+}
+
+.contacts-check a {
+    color: #FBF2C7;
+    text-decoration: underline;
+}
+
+.contacts-form button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 25px;
+    background-color: #FBF2C7;
+    color: #04122D;
+    font-family: 'montesratmed';
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.contacts-form button:hover {
+    background-color: #CDB296;
+}
+
+/* ну и футер😬 */
+
+footer {
+    background: url(../image/footerfon.png) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 65px 0 30px;
+}
+
+.footer-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.footer-top img {
+    width: 150px;
+}
+
+.footer-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-menu a {
+    font-family: 'forum';
+    font-size: 23px;
+    color: #F7E6C8;
+    text-transform: uppercase;
+    padding-right: 30px;
+    border-right: 1px solid #B9A084;
+}
+
+.footer-menu a:last-child {
+    border: none;
+}
+
+.footer-menu a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-links a {
+    font-family: 'montesrat';
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ECEBE7;
+    border-bottom: 1px solid #B9A084;
+    padding-bottom: 6px;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.footer-contact img {
+    width: 23px;
+}
+
+.footer-contact p,
+.footer-contact a {
+    font-family: 'montesrat';
+    font-size: 16px;
+    color: #ECEBE7;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-social img {
+    width: 75px;
+}
+
+.footer-social a:hover {
+    opacity: 0.6;
+}
+
+.footer-end {
+    font-family: 'forum';
+    font-size: 20px;
+    color: #CDB296;
+    opacity: 0.7;
+    text-align: center;
+    margin-top: 55px;
+}
